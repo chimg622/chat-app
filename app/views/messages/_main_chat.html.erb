@@ -1,15 +1,12 @@
-<div class = "chat_header">
-  <div class ="left_header">
-    <div class = "header_title">
-      <%= @room.name %>
-    </div>
-    <div class = "header_user">
-      <% link_to current_user.name%>
+<div class="chat_header">
+  <div class="left_header">
+    <div class="header_title">
+      <%= @room.name%>
     </div>
   </div>
-  <div class = "right_header">
+  <div class="right_header">
     <div class="header_button">
-      <a href="#">チャットを終了する</a>
+      <%= link_to "チャットを終了する", room_path(@room), data: { turbo_method: :delete } %>
     </div>
   </div>
 </div>
